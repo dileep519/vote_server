@@ -72,7 +72,7 @@ router.post('/add',verify,(req,res)=>{
             });
             newhacker.save().then((response)=>{
                 res.status(200).send({error:"",data:true});
-                
+
             }).catch((err)=>{
                 res.status(400).send(err);
             })
@@ -83,7 +83,7 @@ router.post('/add',verify,(req,res)=>{
     }
 })
 
-router.post('/hackers',verify,(req,res)=>{
+router.post('/hackers',(req,res)=>{
     
     hacker.find({}).then((response)=>{
         res.status(200).send({error:"",data:response});
